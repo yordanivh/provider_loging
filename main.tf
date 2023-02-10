@@ -8,4 +8,12 @@ provider "vsphere" {
   allow_unverified_ssl = true
 }
 
-resource "null_resource" "eg1" {}
+resource "null_resource" "eg1" {
+    triggers = {
+      uuid = uuid()
+    }
+    provisioner "tes" {
+        local-exec = "echo $HOME"
+    }
+    
+}
