@@ -12,8 +12,8 @@ resource "null_resource" "eg1" {
     triggers = {
       uuid = uuid()
     }
-    provisioner "tes" {
-        local-exec = "echo $HOME"
+    provisioner "local-exec"{
+        command = "echo $HOME"
     }
-    
+  
 }
