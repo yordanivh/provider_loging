@@ -8,4 +8,4 @@ provider "vsphere" {
   allow_unverified_ssl = true
 }
 
-resource "null_resource" "eg" {}
+resource "null_resource" "eg1" {}
