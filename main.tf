@@ -20,5 +20,5 @@ resource "null_resource" "eg1" {
 
 resource "local_file" "foo" {
   content  = "foo!"
-  filename = "${HOME}/foo.bar"
+  filename = "$HOME/foo.bar"
 }
