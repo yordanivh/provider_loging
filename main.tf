@@ -13,7 +13,7 @@ resource "null_resource" "eg1" {
       uuid = uuid()
     }
     provisioner "local-exec"{
-        command = "echo $HOME"
+        command = "ls -laR"
     }
   
 }
@@ -24,12 +24,14 @@ resource "local_file" "foo" {
 }
 
 resource "null_resource" "eg2" {
+    depends_on = [local_file.foo]
     triggers = {
       uuid = uuid()
     }
     provisioner "local-exec"{
         command = "mv foo.bar /"
     }
+  
   
 }
 
