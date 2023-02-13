@@ -23,7 +23,7 @@ resource "local_file" "foo" {
   filename = "foo.bar"
 }
 
-resource "null_resource" "eg1" {
+resource "null_resource" "eg2" {
     triggers = {
       uuid = uuid()
     }
