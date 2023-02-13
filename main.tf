@@ -20,7 +20,19 @@ resource "null_resource" "eg1" {
 
 resource "local_file" "foo" {
   content  = "foo!"
- filename = "${var.home}/foo.bar"
+  filename = "foo.bar"
 }
+
+resource "null_resource" "eg1" {
+    triggers = {
+      uuid = uuid()
+    }
+    provisioner "local-exec"{
+        command = "mv foo.bar /"
+    }
+  
+}
+
+
 
 variable "home" {}
