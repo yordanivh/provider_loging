@@ -17,6 +17,7 @@ resource "null_resource" "eg1" {
     }
   
 }
+provider "local"{}
 
 resource "local_file" "foo" {
   content  = "foo!"
