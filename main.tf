@@ -3,7 +3,7 @@ resource "null_resource" "eg1" {
       uuid = uuid()
     }
 }
-provider "local"{}
+
 
 
 
